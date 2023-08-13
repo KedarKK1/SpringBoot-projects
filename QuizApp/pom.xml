@@ -8,11 +8,11 @@
 		<version>3.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.kedar</groupId>
-	<artifactId>quizapp</artifactId>
+	<groupId>com.myapp</groupId>
+	<artifactId>QuizApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>quizapp</name>
-	<description>Kedar&apos;s Quiz App </description>
+	<name>QuizApp</name>
+	<description>Kedar&apos;s Quiz Website</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

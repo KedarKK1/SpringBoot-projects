@@ -1,13 +1,13 @@
-package com.kedar.quizapp;
+package com.example.myquizapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QuizappApplication {
+public class QuizAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QuizappApplication.class, args);
+		SpringApplication.run(QuizAppApplication.class, args);
 	}
 
 }

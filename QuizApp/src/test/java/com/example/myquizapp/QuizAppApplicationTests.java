@@ -1,10 +1,10 @@
-package com.kedar.quizapp;
+package com.example.myquizapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class QuizappApplicationTests {
+class QuizAppApplicationTests {
 
 	@Test
 	void contextLoads() {
