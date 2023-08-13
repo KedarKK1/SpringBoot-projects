@@ -1,8 +1,11 @@
 package com.example.myquizapp.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,17 +28,25 @@ public class QuestionService {
 		// List<Pet> findAllByAge(Integer age);
 	}
 	
-	public List<Question> getQuestionsByCategory(String category){
-		return questionDao.findByCategory(category);
+	
+	public ResponseEntity<List<Question>> getQuestionsByCategory(String category){
+		// no need to do exception handling in QuestionService as we have already done in QuestionController, here we are just returning data!
+		try {			
+			return new ResponseEntity<>(questionDao.findByCategory(category), HttpStatus.OK);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
 	}
 	
-	public Question getQuestionById(Integer id) {
+	public Question getQuestionById(Integer id) {		
 		return questionDao.getById(id);
 	}
 	
-	public String addQuestion(Question question) {
+	public ResponseEntity<String> addQuestion(Question question) {
+		
 		questionDao.save(question);
-		return "successss!!!";
+		return new ResponseEntity<>("successss!!!", HttpStatus.CREATED);
 	}
 	
 	public String deleteQuestionById(Integer id) {

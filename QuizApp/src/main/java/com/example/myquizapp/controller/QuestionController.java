@@ -1,8 +1,11 @@
 package com.example.myquizapp.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,23 +29,29 @@ public class QuestionController {
 	
 	// url => http://localhost:8080/question/allQuestions
 	@GetMapping("allQuestions")
-	public List<Question> getAllQuestion() {
-		
-//		return "Hi, these are your all questions2";
-		return questionService.getAllQuestions();
+	public ResponseEntity<List<Question>> getAllQuestion() {
+		// either we can do exception handling in controller or in service, as per your wish!
+		//	return "Hi, these are your all questions2";
+		try {			
+			return new ResponseEntity<>(questionService.getAllQuestions(), HttpStatus.OK);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	@GetMapping("category/{category}")
-	public List<Question> getQuestionsByCategory(@PathVariable String category){
+	public ResponseEntity<List<Question>> getQuestionsByCategory(@PathVariable String category){
 		// if multiple pathvariables, eg. category/{mycategory}/{mydifficulty} then -
 		// public List<Question> getQuestionsByCategory(@PathVariable("mycategory") String category, @PathVariable("mydifficulty") String difficulty){
+		
+		// in this example, exception handling is done in service instead of inside controller
 		return questionService.getQuestionsByCategory(category);
 	}
 	
 	@PostMapping("add")
-	public String addQuestion(@RequestBody Question question) { // accepting JSON from client
-		questionService.addQuestion(question);
-		return "successss!!!";
+	public ResponseEntity<String> addQuestion(@RequestBody Question question) { // accepting JSON from client
+		return questionService.addQuestion(question);
 	}
 	
 	@DeleteMapping("delete/{qid}")
