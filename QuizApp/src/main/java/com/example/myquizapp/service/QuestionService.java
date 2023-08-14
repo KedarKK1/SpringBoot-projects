@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.example.myquizapp.Question;
 import com.example.myquizapp.dao.QuestionDao;
+import com.example.myquizapp.model.Question;
 
 @Service
 public class QuestionService {
@@ -27,7 +27,6 @@ public class QuestionService {
 		// @Query("select p from Pet p where p.age = ?1")
 		// List<Pet> findAllByAge(Integer age);
 	}
-	
 	
 	public ResponseEntity<List<Question>> getQuestionsByCategory(String category){
 		// no need to do exception handling in QuestionService as we have already done in QuestionController, here we are just returning data!

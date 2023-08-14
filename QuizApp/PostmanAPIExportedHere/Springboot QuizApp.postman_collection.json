@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "65805e84-f26c-4db7-b07e-23018f21f19e",
+		"name": "Springboot QuizApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22898937"
+	},
+	"item": [
+		{
+			"name": "Quiz",
+			"item": [
+				{
+					"name": "add Quiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questionTitle\": \"What is the purpose of a Python decorator?\",\r\n    \"option1\": \"To add inline comments within a function\",\r\n    \"option2\": \"To mark a function as deprecated and discourage its use\",\r\n    \"option3\": \"To modify or extend the behavior of a function or class method\",\r\n    \"option4\": \"To define a new variable within a function's scope\",\r\n    \"rightAnswer\": \"To modify or extend the behavior of a function or class method\",\r\n    \"difficultylevel\": \"Medium\",\r\n    \"category\": \"Python\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/quiz/create?category=Java&numQ=3&title=JavaQuiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"quiz",
+								"create"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Java"
+								},
+								{
+									"key": "numQ",
+									"value": "3"
+								},
+								{
+									"key": "title",
+									"value": "JavaQuiz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "results - submit Quiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": \"6\",\r\n        \"response\": \"Abstract classes support multiple inheritance, while interfaces do not\"\r\n    },\r\n    {\r\n        \"id\": \"7\",\r\n        \"response\": \"compares memory addresses egweagt st3bwgt5tete3tf\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/quiz/submit/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get Quiz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/quiz/get/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "get All Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/question/allQuestions"
+					},
+					"response": []
+				},
+				{
+					"name": "get Questions by Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/question/category/Java"
+					},
+					"response": []
+				},
+				{
+					"name": "add Questions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questionTitle\": \"What is the diff. b/w equals() method & == operator in Java when comparing objects?\",\r\n    \"option1\": \"equals() method compares the contents of objects, while == operator compares memory addresses\",\r\n    \"option2\": \"equals() method is used to compare primitive data types, while == operator is used for objects\",\r\n    \"option3\": \"equals() method & == operator perform the same type of comparison and can be used interchangeably\",\r\n    \"option4\": \"equals() method compares memory addresses, while == operator compares the contents of objects\",\r\n    \"rightAnswer\": \"equals() method compares the contents of objects, while the == operator compares memory addresses\",\r\n    \"difficultylevel\": \"Hard\",\r\n    \"category\": \"Java\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/question/add"
+					},
+					"response": []
+				},
+				{
+					"name": "update Questions",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questionTitle\": \"Which of the following is the purpose of a Python decorator?\",\r\n    \"option1\": \"To add inline comments within a function\",\r\n    \"option2\": \"To mark a function as deprecated and discourage its use\",\r\n    \"option3\": \"To modify or extend the behavior of a function or class method\",\r\n    \"option4\": \"To define a new variable within a function's scope\",\r\n    \"rightAnswer\": \"To modify or extend the behavior of a function or class method\",\r\n    \"difficultylevel\": \"Medium\",\r\n    \"category\": \"Python\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/question/update/3"
+					},
+					"response": []
+				},
+				{
+					"name": "delete Questions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/question/delete/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quiz Results",
+			"item": [
+				{
+					"name": "results - submit Quiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": \"6\",\r\n        \"response\": \"Abstract classes support multiple inheritance, while interfaces do not\"\r\n    },\r\n    {\r\n        \"id\": \"7\",\r\n        \"response\": \"compares memory addresses egweagt st3bwgt5tete3tf\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/quiz/submit/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
