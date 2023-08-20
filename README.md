@@ -5,7 +5,7 @@
 <img src="./QuizApp/Screenshots/ss3.PNG" alt="create new question using Post request" >
 <img src="./QuizApp/Screenshots/ss4.PNG" alt="detetion of question using Delete request by passing id in params" >
 <img src="./QuizApp/Screenshots/ss6.PNG" alt="update question using Delete request by passing id in params and new updated body of question" >
-<img src="./QuizApp/Screenshots/ss7.PNG" alt="Questiong creation using exception handling done!" >
+<img src="./QuizApp/Screenshots/ss7.PNG" alt="Questions creation using exception handling done!" >
 <img src="./QuizApp/Screenshots/ss8.PNG" alt="Questions model in PostgreSQL database!" >   
 <img src="./QuizApp/Screenshots/ss10.PNG" alt="quiz model created by @Model entity successfully!" >
 <img src="./QuizApp/Screenshots/ss11Working.PNG" alt="Quiz added successfully" >
