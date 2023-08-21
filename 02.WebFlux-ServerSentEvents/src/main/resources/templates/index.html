@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <link href="/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          rel="stylesheet"/>
+    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet"/>
+</head>
+<body>
+<script src="/webjars/jquery/1.11.1/jquery.min.js"
+        type="text/javascript"></script>
+<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"
+        type="text/javascript"></script>
+
+<h3>
+    <p align="center">Some famous books:
+    <p align="center" id="books">
+    </p></h3>
+
+<br></br>
+
+<h1>
+    <p align="center">Increase the count every half second:
+    <p align="center" id="numbers"></p>
+</h1>
+
+<br></br>
+
+<h2>
+    <p align="center">Some Famous Quotes:
+    <p align="center" id="quotes"></p>
+</h2>
+
+<br></br>
+<br></br>
+
+<h1>
+    <p align="center">Time and Date: </p>
+    <p align="center" id="date"></p>
+</h1>
+
+<br></br>
+
+<h2>
+    <p align="center">Random Numbers every 300ms</p>
+    <p align="center" id="random"></p>
+</h2>
+
+
+<script type="text/javascript">
+    var books = new EventSource("/flux/books");
+    books.onmessage = function (e) {
+        document.getElementById("books").innerHTML = e.data;
+    };
+    var numbers = new EventSource("/flux/numbers");
+    numbers.onmessage = function (e) {
+        document.getElementById("numbers").innerHTML = e.data;
+    };
+    var quotes = new EventSource("/flux/quotes");
+    quotes.onmessage = function (e) {
+        document.getElementById("quotes").innerHTML = e.data;
+    };
+    var date = new EventSource("/flux/date");
+    date.onmessage = function (e) {
+        var obj = JSON.parse(e.data);
+        // console.log(e.data);
+        document.getElementById("date").innerHTML = obj;
+    };
+    var random = new EventSource("/flux/random");
+    random.onmessage = function (e) {
+        document.getElementById("random").innerHTML = e.data;
+    }
+</script>
+</body>

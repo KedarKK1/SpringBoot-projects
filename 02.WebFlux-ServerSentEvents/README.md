@@ -1,5 +1,6 @@
 # Screenshots (Wait for 7-8 PNG files to load)
 
+<img src="./Screenshots/ss6.gif" alt="Flux examples on Thymeleaf (index.html)">
 <img src="./Screenshots/ss3.gif" alt="Flux local DateTime">
 <img src="./Screenshots/ss2.png" alt="Mono local DateTime">
 <img src="./Screenshots/ss4.gif" alt="Flux Combining bookFlux & quoteFlux">
