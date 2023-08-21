@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "cce07977-cc36-47fe-89ec-c2311b61a360",
+		"name": "Springboot WebFlux SSE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22898937"
+	},
+	"item": [
+		{
+			"name": "Flux",
+			"item": [
+				{
+					"name": "Filtered, mapped Quotes",
+					"item": [
+						{
+							"name": "filtered quotes flux",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/flux/filteredQuotes"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get random number flux",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/flux/random"
+					},
+					"response": []
+				},
+				{
+					"name": "get dateTime flux",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/flux/date"
+					},
+					"response": []
+				},
+				{
+					"name": "get book flux",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/flux/books"
+					},
+					"response": []
+				},
+				{
+					"name": "get quotes flux",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/flux/quotes"
+					},
+					"response": []
+				},
+				{
+					"name": "get counting numbers flux",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/flux/numbers"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mono",
+			"item": [
+				{
+					"name": "get hello mono",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/mono"
+					},
+					"response": []
+				},
+				{
+					"name": "get all mono",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/mono/all"
+					},
+					"response": []
+				},
+				{
+					"name": "get dateTime mono",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/mono/date"
+					},
+					"response": []
+				},
+				{
+					"name": "get book mono",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/mono/book"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
