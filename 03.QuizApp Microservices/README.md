@@ -1,3 +1,9 @@
+# PORTS 
+- API Gateway : 8765, 
+- QUESTION-SERVICE : 8081, 
+- QUIZ-SERVICE : 8090, 
+- SERVICE-REGISTRY : 8761
+
 # Screenshots (Wait for 5-10 PNG screenshot files to load)
 
 <img src="./Screenshots/ss18.PNG" alt="getAllQuestions by Ids for quiz Microservice" >
