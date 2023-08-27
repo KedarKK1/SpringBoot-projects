@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>question-service</artifactId>
+	<artifactId>quiz-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>question-service</name>
-	<description>question-service microservice for quizApp</description>
+	<name>quiz-service</name>
+	<description>quiz-service microservice for quizApp</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.4</spring-cloud.version>

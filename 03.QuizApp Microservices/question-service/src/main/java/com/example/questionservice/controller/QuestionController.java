@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.xml.namespace.QName;
 
+import org.hibernate.cfg.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +33,9 @@ public class QuestionController {
 	
 	@Autowired
 	QuestionService questionService;
+	
+//	@Autowired
+//	Environment environment;
 	
 	// url => http://localhost:8080/question/allQuestions
 	@GetMapping("allQuestions")
@@ -106,6 +110,7 @@ public class QuestionController {
 	
 	@PostMapping("getQuestions")
 	public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
+//		System.out.println(environment.getProperty("local.server.port"));
 		return questionService.getQuestionsFromIds(questionIds);
 	}
 	
