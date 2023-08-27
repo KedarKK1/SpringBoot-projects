@@ -1,4 +1,22 @@
+## V1 - Monolithic QuizApp
+
+## V2 - QuizApp using Microservices architecture (Quiz-Service, Question-service, API-gateway, Eureka Client-server), OpenFeign
+
 # Screenshots (Wait for 5-10 PNG screenshot files to load)
+
+<img src="./03.QuizApp Microservices/Screenshots/ss18.PNG" alt="getAllQuestions by Ids for quiz Microservice" >
+<img src="./03.QuizApp Microservices/Screenshots/ss19.PNG" alt="getScore by Response Entity for quiz Microservice" >
+<img src="./03.QuizApp Microservices/Screenshots/ss20.PNG" alt="create new port for running 2 VM on port no 8080 and 8081, run->run configurations->arguments tab->-Dserver.port=8081" >
+<img src="./03.QuizApp Microservices/Screenshots/ss21.gif" alt="2 VM running on 8080 and 8081 but not on other ports like 8082" >
+<img src="./03.QuizApp Microservices/Screenshots/ss22.PNG" alt="new quizdb for quiz microservice" >
+<img src="./03.QuizApp Microservices/Screenshots/ss25.PNG" alt="Question-service & quiz-service added to eureka!" >
+<img src="./03.QuizApp Microservices/Screenshots/ss27.PNG" alt="quiz-service working!" >   
+<img src="./03.QuizApp Microservices/Screenshots/ss28.PNG" alt="quiz-service working!" >   
+<img src="./03.QuizApp Microservices/Screenshots/ss29.PNG" alt="quiz-service working!" >
+<img src="./03.QuizApp Microservices/Screenshots/ss30.PNG" alt="all microservices added successfully" >
+<img src="./03.QuizApp Microservices/Screenshots/ss31.PNG" alt="api gateway working!" >
+
+# Monolithic Screenshots -
 
 <img src="./01.QuizApp/Screenshots/ss1.PNG" alt="getAllQuestions" >
 <img src="./01.QuizApp/Screenshots/ss2.PNG" alt="getAllQuestions By Category In Params" >
@@ -6,7 +24,7 @@
 <img src="./01.QuizApp/Screenshots/ss4.PNG" alt="detetion of question using Delete request by passing id in params" >
 <img src="./01.QuizApp/Screenshots/ss6.PNG" alt="update question using Delete request by passing id in params and new updated body of question" >
 <img src="./01.QuizApp/Screenshots/ss7.PNG" alt="Questions creation using exception handling done!" >
-<img src="./01.QuizApp/Screenshots/ss8.PNG" alt="Questions model in PostgreSQL database!" >   
+<img src="./01.QuizApp/Screenshots/ss8.PNG" alt="Questions model in PostgreSQL database!" >
 <img src="./01.QuizApp/Screenshots/ss10.PNG" alt="quiz model created by @Model entity successfully!" >
 <img src="./01.QuizApp/Screenshots/ss11Working.PNG" alt="Quiz added successfully" >
 <img src="./01.QuizApp/Screenshots/ss12.PNG" alt="quiz added successfully in PostgreSQL!" >
