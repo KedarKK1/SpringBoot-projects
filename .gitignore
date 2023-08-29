@@ -3,6 +3,10 @@
 /data.csv
 /unused
 
+/angular/node_modules/*
+/angular/node_modules
+/angular/node_modules/
+
 /springbootResouces
 
 /.metadata/
