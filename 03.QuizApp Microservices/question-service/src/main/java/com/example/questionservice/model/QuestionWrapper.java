@@ -1,8 +1,8 @@
 package com.example.questionservice.model;
 
-import lombok.NoArgsConstructor;
+// import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
+// @NoArgsConstructor
 public class QuestionWrapper {
 	public Integer id;
 	public String questionTitle;
