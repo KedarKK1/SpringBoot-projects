@@ -11,9 +11,11 @@ import { Observable } from 'rxjs';
 export class QuizServiceService {
 
   private quizUrl: string;
+  private submitUrl: string;
 
   constructor(private http: HttpClient) {
-    this.quizUrl = 'http://localhost:8765/QUIZ-SERVICE/quiz/get/1'
+    this.quizUrl = 'http://localhost:8765/QUIZ-SERVICE/quiz/get/1';
+    this.submitUrl = 'http://localhost:8765/QUESTION-SERVICE/question/getScore';
   }
 
   public findAll(): Observable<Quiz[]> {
@@ -23,6 +25,23 @@ export class QuizServiceService {
 
   // public save(quiz: Quiz) {
   //   return this.http.post<Quiz>(this.quizUrl, quiz);
+  // }
+
+  public submitQuiz(selectedResponses: any[]): Observable<any> {
+    return this.http.post(this.submitUrl, selectedResponses);
+  }
+
+  // public submitQuiz(selectedResponses: ): Observable<String> {
+
+  //   return this.http.post(this.submitUrl, selectedResponses)
+  //       .subscribe(
+  //         response => {
+  //           console.log(response); // Handle the response from the server
+  //         },
+  //         error => {
+  //           console.error('Error:', error);
+  //         }
+  //       );
   // }
 
 }

@@ -1,28 +1,48 @@
-<div class="card my-5">
-    <p>quiz-list works!</p>
-    <div class="card-body">
+<div class="card p-2 m-2">
+    <!-- <div class="card-body"> -->
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">id</th>
-            <th scope="col">questionTitle</th>
-            <th scope="col">option1</th>
-            <th scope="col">option2</th>
+            <th scope="col">Response</th>
+            <!-- <th scope="col">Option</th> -->
+            <th scope="col">Select</th>
+            <!-- <th scope="col">option2</th>
             <th scope="col">option3</th>
-            <th scope="col">option4</th>
+            <th scope="col">option4</th> -->
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let quiz of quizes">
             <td>{{ quiz.id }}</td>
             <td>{{ quiz.questionTitle }}</td>
-            <td>{{ quiz.option1 }}</td>
-            <td>{{ quiz.option2 }}</td>
+            <!-- <td>{{ quiz.option1 }}</td> -->
+            <!-- <td>
+              <ol>
+                <li *ngFor="let option of [quiz.option1, quiz.option2, quiz.option3, quiz.option4]">
+                  {{ option }}
+                </li>
+              </ol>    
+            </td> -->
+            <td>
+              <div *ngFor="let option of [quiz.option1, quiz.option2, quiz.option3, quiz.option4]; let i = index">
+                <input
+                  type="radio"
+                  [(ngModel)]="selectedAnswers[quiz.id]"
+                  [name]="'response_' + quiz.id"
+                  [value]="option"
+                  [id]="'option_' + i + '_' + quiz.id"
+                >
+                <label [for]="'option_' + i + '_' + quiz.id">{{ option }}</label>
+              </div>  
+            </td>
+            <!-- <td>{{ quiz.option2 }}</td>
             <td>{{ quiz.option3 }}</td>
-            <td>{{ quiz.option4 }}</td>
+            <td>{{ quiz.option4 }}</td> -->
             <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
           </tr>
         </tbody>
       </table>
-    </div>
+      <button class="btn btn-primary" (click)="submitAnswers()">Submit Answers</button>
+    <!-- </div> -->
   </div>
