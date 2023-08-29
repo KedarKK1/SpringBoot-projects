@@ -1,0 +1,28 @@
+<div class="card my-5">
+    <p>quiz-list works!</p>
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">questionTitle</th>
+            <th scope="col">option1</th>
+            <th scope="col">option2</th>
+            <th scope="col">option3</th>
+            <th scope="col">option4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let quiz of quizes">
+            <td>{{ quiz.id }}</td>
+            <td>{{ quiz.questionTitle }}</td>
+            <td>{{ quiz.option1 }}</td>
+            <td>{{ quiz.option2 }}</td>
+            <td>{{ quiz.option3 }}</td>
+            <td>{{ quiz.option4 }}</td>
+            <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

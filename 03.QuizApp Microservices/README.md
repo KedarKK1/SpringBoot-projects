@@ -1,8 +1,9 @@
 # PORTS
 
 - API Gateway : 8765,
-- QUESTION-SERVICE : 8081,
-- QUIZ-SERVICE : 8090,
+- QUESTION-SERVICE : 8080, (Mention -Dserver.port=8080 in right click on qn service/run-as/run-configurations/arguments tab/ VM arguments)
+<!-- - QUIZ-SERVICE : 8090, -->
+- QUIZ-SERVICE : 8081,
 - SERVICE-REGISTRY : 8761
 
 # Screenshots (Wait for 5-10 PNG screenshot files to load)
